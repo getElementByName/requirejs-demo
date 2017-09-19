@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0,user-scalable=yes">
+  <title>Webpack App</title>
+
+  <script src="./lib/require.js"></script>
+  <script>
+    require.config({
+      baseUrl: '../',
+      paths: {
+        'main': './bundle'
+      }
+    });
+    
+  </script>
+</head>
+
+<body>
+  <div>HELLO WORLD!</div>
+
+  <script>
+    require(["main"], function () {
+      console.log('loaded');
+    });
+  </script>
+
+
+</body>
+
+</html>
